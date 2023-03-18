@@ -9,7 +9,7 @@ module.exports = {
     },
     themeConfig: {
         logo: '',
-        lastUpdated: '最后更新：',
+        lastUpdated: '最后更新',
         nav: [
             { text: '语雀', link: 'https://yuque.com/pzm9012/ct5ume/' },
             { text: '博客', link: 'https://pzm9012.github.io'}
