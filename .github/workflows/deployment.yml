@@ -41,17 +41,16 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
+
+      - name: Install and build
+        run: |
+          npm install -D vuepress
+          npm run docs:build
+        
         
       - name: Deploy
-        uses: jenkey2011/vuepress-deploy@master
-        env: 
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        # 你要操作的目标仓库
-          TARGET_REPO: pzm9012/doc
-        # 构建结果存储的分支
-          TARGET_BRANCH: gh-pages
-        # 要使用的构建命令
-          BUILD_SCRIPT: npm install -D vuepress && npm run docs:build
-        # 构建结果存储目录
-          BUILD_DIR: ./docs/.vuepress/dist/
-
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: docs/.vuepress/dist
+          branch: gh-pages
+          token: ${{ secrets.ACCESS_TOKEN }}
