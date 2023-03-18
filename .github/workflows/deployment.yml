@@ -43,11 +43,8 @@ jobs:
           node-version: 16
 
       - name: Install and build
-        run: |
-          npm install -D vuepress
-          npm run docs:build
-        
-        
+        run: npm install -D vuepress && npm run docs:build
+          
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
