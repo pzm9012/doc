@@ -19,7 +19,7 @@ module.exports = {
           ['/', '说明'],
          {
             title: 'deepin 常用资源整理',   // 必要的
-            path: '/deepin-src-col/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+            path: '/deepin-src-col/sec-0',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: false, // 可选的, 默认值是 true,
             sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
